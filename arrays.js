@@ -23,12 +23,12 @@ var instructors = [
 
 function getLargestNumber (numArray) {
   return Math.max.apply(null, numArray);
-}
-
+};
 
 // ---------------------------
 // 2. Find longest string
 // ---------------------------
+
 function getLongestString (stringArray) {
 	var longest = "";
 	for (var i = 0; i < stringArray.length; i++) {
@@ -37,18 +37,27 @@ function getLongestString (stringArray) {
 	  }
 	}
 	return longest
-}
+};
 
 // ---------------------------
 // 3. Find even numbers
 // ---------------------------
 
-
+var filterEvens = function (nums) {
+	return nums.filter(function (number) {
+		return number % 2 == 0;
+	});
+};
 
 // ---------------------------
 // 4. Find odd numbers
 // ---------------------------
 
+var filterOdds = function (nums) {
+	return nums.filter(function (number) {
+		return number % !2 == 0;
+	});
+};
 
 // ---------------------------
 // 5. Find words that contain `is`
@@ -56,7 +65,7 @@ function getLongestString (stringArray) {
 
 function findIs (string) {
 	return string.includes ("is");
-}
+};
 
 // ---------------------------
 // 5. Join Both Arrays Together
@@ -64,7 +73,6 @@ function findIs (string) {
 // ---------------------------
 
 var numbersWithStrings = numbers.concat(strings)
-
 
 // ---------------------------
 // 6. Use the Instructors array and find all that teach JavaScript, 
