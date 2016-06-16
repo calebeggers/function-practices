@@ -15,12 +15,10 @@ function max(x, y){
 // ---------------------
 
 function maxOfThree(x, y, z){
-    if (x > y) {
-    		return x;
-    } else if (y > z) {
+    if (x > y && x > z) {
+    	return x;
+    } else if (y > x && y > z) {
     	return  y;
-    } else {
-    	return z;
     }
 }
 
@@ -28,16 +26,21 @@ function maxOfThree(x, y, z){
 // Write a function that takes a character (i.e. a string of length 1) and returns true if it is a vowel, false otherwise.
 // ---------------------
 
+// function betterVowelCheck = function (char) {
+// 		var vowels = ["a", "e", "i", "o", "u"]
+// 		reurn vowels.includes(char)
+// }
+
 function isVowel(char){
-    if (char.includes ("a")) {
+    if (char. == "a" || "A") {
     	return true;
-    } else if (char == "e") {
+    } else if (char == "e" || "E") {
     	return true;
-    } else if (char =="i") {
+    } else if (char =="i" || "I") {
     	return true;
-    } else if (char == "o") {
+    } else if (char == "o" || "O") {
     	return true;
-    } else if (char == "u") {
+    } else if (char == "u" || "U") {
     	return true;
     }
     else {
@@ -60,9 +63,8 @@ function rovarspraket(phrase){
       }
 	};
 
-    //...
     var charArray = [];
-    for(var count = 0; count < phrase.length; count++) {
+    for(var count = 0; count < phrase.length; count++){
     	var charPush = handleLetter (phrase.charAt(count));
     	charArray.push(charPush);
     }
